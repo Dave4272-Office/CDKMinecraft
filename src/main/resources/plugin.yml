@@ -1,0 +1,13 @@
+name: ${name}
+version: ${version}
+main: ${main}
+api-version: ${mcApiVersion}
+authors: [Debraj Kundu]
+depend: [Vault, PlaceholderAPI]
+description: Description
+website: minecraft.corpdk.com
+#softdepend: [not]
+prefix: ${name}
+#
+#commands:
+#  test:
