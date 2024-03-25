@@ -4,7 +4,7 @@
 oldJarFileNames=()
 while IFS= read -r -d '' file; do
     oldJarFileNames+=("$(basename "${file}")")
-done < <(find "${TEST_SERVER_HOME}/plugins" -maxdepth 1 -type f -name "CDKMinecraftServerPlugin-*.jar" -print0)
+done < <(find "${TEST_SERVER_HOME}/plugins" -maxdepth 1 -type f -name "CDKMinecraft-*.jar" -print0)
 
 echo "Deleting the following old plugin files from ${TEST_SERVER_HOME}/plugins"
 i=1
@@ -15,7 +15,7 @@ for file in "${oldJarFileNames[@]}"; do
 done
 
 # Find the latest created file matching the pattern
-jarFileName=$(find ./build/libs -maxdepth 1 -type f -name "CDKMinecraftServerPlugin-*-all.jar" -printf '%T@ %p\n' | sort -n | tail -1 | cut -d' ' -f2)
+jarFileName=$(find ./build/libs -maxdepth 1 -type f -name "CDKMinecraft-*-all.jar" -printf '%T@ %p\n' | sort -n | tail -1 | cut -d' ' -f2)
 
 # Ensure jarFileName is not empty
 if [[ -n "${jarFileName}" ]]; then

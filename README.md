@@ -1,2 +1,2 @@
-# CDKMinecraftServerPlugin
-CDKMinecraftServerPlugin
+# CDKMinecraft
+CDKMinecraft

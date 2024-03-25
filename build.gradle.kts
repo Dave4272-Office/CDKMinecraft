@@ -9,7 +9,7 @@ version = "0.0.1-SNAPSHOT"
 val paperVersion = "1.20.4-R0.1-SNAPSHOT"
 val vaultVersion = "1.7"
 val papiVersion = "2.11.5"
-val mcVersion = "1.20"
+val mcApiVersion = "1.20"
 
 repositories {
     mavenCentral()
@@ -40,7 +40,7 @@ tasks.processResources {
     val mappedValue = mapOf(
         "name" to project.name,
         "version" to version,
-        "mcApiVersion" to mcVersion,
+        "mcApiVersion" to mcApiVersion,
         "main" to "${project.group}.${project.name}"
     )
     filesMatching("plugin.yml") {
