@@ -14,12 +14,15 @@ val mcApiVersion = "1.20"
 repositories {
     mavenCentral()
     maven {
+        name = "papermc-repo"
         url = uri("https://repo.papermc.io/repository/maven-public/")
     }
     maven {
+        name = "jitpack.io"
         url = uri("https://jitpack.io")
     }
     maven {
+        name = "placeholderapi"
         url = uri("https://repo.extendedclip.com/content/repositories/placeholderapi/")
     }
 }
