@@ -1,4 +1,4 @@
-package com.corpdk.minecraft
+package com.corpdk.minecraft.cdkminecraft
 
 import org.bukkit.plugin.java.JavaPlugin
 

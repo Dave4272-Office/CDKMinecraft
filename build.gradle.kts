@@ -10,6 +10,10 @@ val paperVersion = "1.20.4-R0.1-SNAPSHOT"
 val vaultVersion = "1.7"
 val papiVersion = "2.11.5"
 val mcApiVersion = "1.20"
+val pluginDependencies = listOf(
+    "Vault",
+    "PlaceholderAPI",
+)
 
 repositories {
     mavenCentral()
@@ -44,8 +48,10 @@ tasks.processResources {
         "name" to project.name,
         "version" to version,
         "mcApiVersion" to mcApiVersion,
-        "main" to "${project.group}.${project.name}"
+        "main" to "${project.group}.${project.name.lowercase()}.${project.name}",
+        "pluginDependencies" to pluginDependencies,
     )
+    inputs.properties(mappedValue)
     filesMatching("plugin.yml") {
         expand(mappedValue)
     }

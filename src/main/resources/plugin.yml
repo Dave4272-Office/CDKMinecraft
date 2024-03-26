@@ -1,13 +1,22 @@
 name: ${name}
 version: ${version}
 main: ${main}
-api-version: ${mcApiVersion}
-authors: [Debraj Kundu]
-depend: [Vault, PlaceholderAPI]
 description: Description
+authors: [Debraj Kundu]
+contributors: [Debraj Kundu]
 website: minecraft.corpdk.com
-#softdepend: [not]
+api-version: ${mcApiVersion}
 prefix: ${name}
+#loadbefore:
+#  - Vault
+depend: ${pluginDependencies}
+#softdepend: [not]
 #
 #commands:
 #  test:
+permissions:
+  cdkminecraft.*:
+    default: op
+    description: Give players with op everything by default
+#    children:
+#      essentials.gamemode.*: true
