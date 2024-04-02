@@ -32,4 +32,8 @@ else
 fi
 echo
 cd "${TEST_SERVER_HOME}" || exit 1
-./start.sh
+if [[ -z "${DEBUG}" ]]; then
+  ./start.sh
+else
+  ./start-debug.sh
+fi
